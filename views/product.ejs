@@ -1,0 +1,63 @@
+<%- include('header'); -%>
+<main>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-sm-1"></div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md">
+                    <img id="product-img" class="img-fluid" src="<%= product.image %>" alt="<%= product.name %>">
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card-body">
+                      <h2 id="product-name">
+                        <%= product.name %>
+                      </h2>
+                      <p id="description">
+                        <%= product.description %>
+                      </p>                          
+                      <p id="price">
+                        <%= product.price %>
+                      </p>
+                      <hr>
+                      <div class="input-group mb-3">
+                        <button class="btn btn-outline-secondary" type="button" id="btn-decrement">-</button>
+                        <input id="product-amount" type="number" class="form-control" value=1 disabled>
+                        <button class="btn btn-outline-secondary" type="button" id="btn-increment">+</button>
+                      </div>
+                      <div>
+                          <button class="btn btn-success" style="width: 100%;">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-sm-2"></div>
+        </div>
+        </div>
+        <div class="text-center row" id="recommendations">
+            <h2>You may also like</h2>
+            <% recommendations.forEach(product => { %>
+                <div class="col-sm-3 card p-0">
+                    <div class="card-body p-0">
+                        <a href="/products/<%= product.id %>"><img src="<%= product.image %>" alt="<%= product.name %>" class="card-img-top img-fluid"></a>
+                        <h5 class="card-title">
+                            <%= product.name %>
+                        </h5>
+                        <p class="card-text">
+                            $<%= product.price %>
+                        </p>
+                        <button class="btn btn-success m-1">
+                            Add to cart
+                        </button>
+                        <a href="/products/<%= product.id %>" class="btn btn-primary m-1">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+  </main>
+<%- include('footer'); -%>

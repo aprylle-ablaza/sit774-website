@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+          </nav>
+          <section class="container-fluid p-0">
+            <div class="hero-image d-flex align-items-center justify-content-center text-center text-white">
+                <div class="overlay"></div>
+                <div class="hero-text">
+                    <h1 class="display-4">Infinite Glow: Radiant Skin Starts Here</h1>
+                    <p class="lead">Discover our luxurious skincare range</p>
+                    <a href="/products" class="btn btn-primary btn-lg">Shop Now</a>
+                </div>
+            </div>
+          </section>
+    </header>
+    <main>
+        <div id="best-sellers" class="row m-0 text-center">
+          <h2>Best Sellers</h2>
+          <% bestsellers.forEach(product => { %>
+            <div class="col-sm card p-0">
+                <a href="/products/<%= product.id %>">
+                    <img src="<%= product.image %>" alt="<%= product.name %>" class="card-img img-fluid">
+                </a>
+                <p><%= product.name %></p>
+                <p><%= product.price %></p>
+            </div>
+        <% }); %>
+        </div>
+        <div class="text-center row align-items-center">
+          <h2>About Us</h2>
+          <div class="col-sm" id="about-us-image">
+          </div>
+          <div class="col-xl">
+            <p class="lead m-5">
+              Welcome to Infinite Glow, where we believe in the transformative power of personalized skincare. At Infinite Glow, we’re dedicated to crafting bespoke skincare solutions that cater to your unique needs and preferences. Our mission is to provide you with high-quality, effective products that enhance your natural beauty and boost your confidence.
+            </p>
+            <p class=" lead m-5">
+              Our team of skincare experts combines extensive industry knowledge with cutting-edge technology to create personalized scents, lotions, and other beauty care essentials. We use only the finest ingredients, ensuring that each product is both luxurious and gentle on your skin. Our commitment to excellence means we prioritize safety and efficacy, delivering results you can trust.
+            </p>
+            <p class="lead m-5">
+              Whether you're looking for a signature fragrance or a custom lotion designed to meet your specific skincare goals, we’re here to guide you every step of the way. At Infinite Glow, your satisfaction and well-being are our top priorities. We invite you to explore our range of products and discover the perfect match for your skin.
+            </p>
+            <p class="lead m-5">
+              Thank you for choosing us to be a part of your skincare journey. We look forward to helping you achieve radiant, healthy skin!
+            </p>
+          </div>
+        </div>
+    </main>
+
+<%- include('footer'); -%>

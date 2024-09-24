@@ -1,0 +1,15 @@
+#about-us-1{
+    background-image: url('/resources/other_images/warehouse.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+#about-us-2{
+    background-image: url('/resources/other_images/founder.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}

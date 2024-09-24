@@ -1,0 +1,53 @@
+#services-hero-image{
+    background-image: url('/resources/other_images/serene-spa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+#services-image-1{
+    background-image: url('/resources/other_images/serene-spa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+}
+
+#services-image-2{
+    background-image: url('/resources/other_images/facial-treatment.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative; 
+}
+
+#services-image-3{
+    background-image: url('/resources/other_images/anti-aging.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative; 
+}
+
+#services-image-4{
+    background-image: url('/resources/other_images/bespoke-skincare.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative; 
+}
